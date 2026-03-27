@@ -4,6 +4,7 @@ import com.poly.server.request.CategoryRequest;
 import com.poly.server.response.CategoryResponse;
 import com.poly.server.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/category-management")
+@CrossOrigin(origins = "*") // Cho FE duoc quyen truy cap cac duong dan trong controller nay
 public class CategoryController {
 
     @Autowired
