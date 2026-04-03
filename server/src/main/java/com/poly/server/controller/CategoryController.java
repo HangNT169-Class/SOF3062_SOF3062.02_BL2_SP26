@@ -51,7 +51,8 @@ public class CategoryController {
     // gia tri nao co dinh => defaultValue
     @GetMapping("paging")
     public List<CategoryResponse>phanTrang(@RequestParam("pageNo1") Integer pageNo,
-                                           @RequestParam(value = "pageSize1", defaultValue = "5") Integer pageSize){
+                                           @RequestParam(value = "pageSize1", defaultValue = "5")
+                                           Integer pageSize){
         return categoryService.phanTrangCate(pageNo,pageSize).getContent();
     }
 
